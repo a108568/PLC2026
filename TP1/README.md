@@ -16,6 +16,7 @@ Este TP consiste na definição de uma expressão regular que permite reconhecer
 A expressão regular utilizada é:
 
 ^1*(01?)*0*$
+
 Esta expressão permite reconhecer strings constituídas pelos caracteres 0 e 1, garantindo que a sequência "011" não aparece em nenhuma posição da string.
 
 ## Lista de Resultados
