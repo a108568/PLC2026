@@ -1,6 +1,6 @@
 ## Titulo
 
-##Expressão regular para ler strings binárias que não contêm a string "011"
+Expressão regular para ler strings binárias que não contêm a string "011"
 
 ## Autor
 
