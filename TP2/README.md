@@ -13,7 +13,8 @@ Conversor de MarkDown para HTML
 ## Resumo
 
 Este TP consiste na criação de um conversor de Markdown para HTML.
-A minha estratégia inicial foi usar as expressões regulares para conseguir passar os exemplos pedidos para HTML usando a biblioteca re.
+
+As expressões usadas permitem passar de Markdown para HTML facilmente 
 
 
 ## Lista de Resultados
