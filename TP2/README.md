@@ -19,3 +19,4 @@ As expressões usadas permitem passar de Markdown para HTML facilmente garantind
 
 ## Lista de Resultados
 
+- [Resolução](./resolucao.txt)
