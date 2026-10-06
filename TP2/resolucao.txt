@@ -1,0 +1,53 @@
+import re
+
+def markdown_to_html(texto):
+
+    html = texto
+
+    # Cabeçalhos
+    html = re.sub(r"^# (.*)$", r"<h1>\1</h1>", html, flags=re.MULTILINE) 
+
+    # Bold
+    html = re.sub(r"\*\*(.*?)\*\*", r"<b>\1</b>", html)
+
+    # Itálico
+    html = re.sub(r"\*(.*?)\*", r"<i>\1</i>", html)
+
+    # Lista numerada
+    linhas = html.splitlines()
+
+    resultado = []
+    em_lista = False
+
+    for linha in linhas:
+
+        match = re.match(r"^\d+\. (.*)$", linha)
+
+        if match:
+
+            if not em_lista:
+                resultado.append("<ol>")
+                em_lista = True
+
+            resultado.append(f"<li>{match.group(1)}</li>")
+
+        else:
+
+            if em_lista:
+                resultado.append("</ol>")
+                em_lista = False
+
+            resultado.append(linha)
+
+    if em_lista:
+        resultado.append("</ol>")
+
+    html = "\n".join(resultado)
+
+    # Imagem
+    html = re.sub(r"!\[([^\]]*)\]\(([^)]+)\)",r'<img src="\2" alt="\1"/>',html)
+
+    # Link
+    html = re.sub(r"\[([^\]]+)\]\(([^)]+)\)",r'<a href="\2">\1</a>',html)
+
+    return html
