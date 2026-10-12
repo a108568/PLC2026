@@ -23,3 +23,4 @@ Por fim, testei o programa com diferentes exemplos para verificar se os tokens e
 
 ## Lista de Resultados
 
+- [Resolução](./resolucao.txt)
